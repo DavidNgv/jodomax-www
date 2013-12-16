@@ -26,8 +26,22 @@
               </ul>
             </div>
             <div class="entry-body effect-loaded">
-              <h3 class="entry-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h3 class="entry-title"><a href="#">Set up not found handler for Nodejs</a></h3>
+              <p>Use handler as middleware of express and put it right after the static command.</p>
+              <pre class="clearfix prettyprint">
+        var _notfoundHandler = function(req, res) {
+          res.status(400);
+
+          res.render('404', {
+            title: _title,
+            url: req.url
+          });
+        };
+
+        // Handle 404
+        app.use(_notfoundHandler);
+
+              </pre>
             </div>
             <div class="entry-meta effect-loaded">
               <ul>

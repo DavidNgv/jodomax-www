@@ -52,6 +52,24 @@
 <script src="/js/home-script.js" type="text/javascript"></script>
 <script src="/js/switcher.js" type="text/javascript"></script>
 
+{{#if isCountDown}}
+  <script src="/js/countdown.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+
+      $("#countdown").countdown({
+          date: "20 december 2013 12:00:00",
+          format: "on"
+        },
+
+        function() {
+          // callback function
+        });
+
+    });
+  </script>
+{{/if}}
+
 </head>
 <body class="bg-1">
 

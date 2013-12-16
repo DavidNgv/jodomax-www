@@ -71,7 +71,8 @@ var _countdownHandler = function (req, res) {
   res.render('countdown', {
     title: _title,
     url: req.url,
-    layout: 'countdown'
+    isCountDown: true
+    //layout: 'countdown'
   });
 };
 

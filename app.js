@@ -133,7 +133,8 @@ app.get('/', function (req, res) {
 app.get('/gioi-thieu', function (req, res) {
   res.render('about', {
     title: _title,
-    url: req.url
+    url: req.url,
+    hasProgress: true
   });
 });
 

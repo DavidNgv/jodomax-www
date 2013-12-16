@@ -79,6 +79,26 @@ app.use(app.router);
 app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express['static'](path.join(__dirname, 'public')));
 
+// Handle 404
+app.use(function(req, res) {
+  res.status(400);
+  res.render('404', {
+    title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
+    url: req.url
+  });
+});
+
+// Handle 500
+app.use(function(error, req, res, next) {
+  res.status(500);
+  res.render('500', {
+    title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
+    url: req.url,
+    error: error
+  });
+});
+
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -107,6 +127,7 @@ app.get('*', function(req, res){
 });
 */
 
+/*
 app.use(function(req, res) {
     res.render('404', {
 //    res.render('countdown', {
@@ -114,6 +135,7 @@ app.use(function(req, res) {
         url: req.url
     });
 });
+*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

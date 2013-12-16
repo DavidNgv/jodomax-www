@@ -126,7 +126,7 @@ app.get('/gioi-thieu', function (req, res) {
   });
 });
 
-app.get('/san-pham/:category', function (req, res) {
+app.get('/san-pham/:category?', function (req, res) {
   res.render('countdown', {
     title: _title,
     url: req.url,

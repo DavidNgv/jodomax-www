@@ -1,4 +1,4 @@
-
+var _title = 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam';
 /**
  * Module dependencies.
  */
@@ -84,7 +84,7 @@ app.use(function(req, res) {
   res.status(400);
     res.render('countdown', {
 //  res.render('404', {
-    title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
+    title: _title,
     url: req.url,
     layout: 'countdown'
   });
@@ -94,7 +94,7 @@ app.use(function(req, res) {
 app.use(function(error, req, res, next) {
   res.status(500);
   res.render('500', {
-    title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
+    title: _title,
     url: req.url,
     error: error
   });
@@ -113,10 +113,15 @@ if ('development' == app.get('env')) {
  */
 app.get('/', function (req, res) {
     res.render('index', {
-        title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam'
+      title: _title
     });
 });
 
+app.get('/ve-jodomax', function (req, res) {
+  res.render('about', {
+    title: _title
+  });
+});
 
 /*
  * Start server

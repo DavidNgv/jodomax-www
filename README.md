@@ -2,5 +2,5 @@ jodomax-www
 ===========
 
 Jodomax website
-Developing use Nodejs technology !
-Have fun...
+The site is developed using Nodejs and Handlebar template !
+\n Have fun...

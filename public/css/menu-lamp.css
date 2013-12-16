@@ -1,0 +1,287 @@
+/* =============================================================== */
+/* Main Navigation
+/* =============================================================== */
+#navigation{
+	float:right;	
+}
+#navigation .btn-group{display:none;}
+.menu-lamp {
+    height:110px;
+	padding:0; 
+	width:614px;
+}
+.menu-lamp ul {
+   cursor:pointer;
+   position:fixed;
+   list-style: none; 
+}
+.menu-lamp .submenu
+{
+	position:relative;
+	z-index:1000;
+}
+/*settings for upper menu main links*/
+.menu-lamp > li {
+    cursor:pointer;
+    position:relative;
+	float: left;
+	height:110px;
+	z-index:5;
+	width:102px;
+}
+.menu-lamp > li > a { 
+   position:relative;
+   z-index:30;
+   cursor:pointer;
+   font-size:12px;
+   font-weight:bold;
+   text-align:center;
+   display:block;
+   cursor: pointer;	
+   padding:35px 15px 0 15px;
+   text-transform:uppercase;
+}
+.menu-lamp > li > a.active,
+.menu-lamp > li:hover > a
+{
+	color:#39c381;
+}
+.menu-lamp > li > a:after
+{
+	color: #cbcbcb;
+	content: attr(data-desc);
+	font-size: 11px;
+	display: block;
+	line-height: 0;
+	margin: 8px 0 0;
+	font-weight:normal;
+	text-align: center;
+	text-transform:capitalize;
+}
+/*settings for submenus*/
+.menu-lamp > li .submenu
+{
+	position:relative;
+	top:47px;
+	left:0;
+	padding:0;
+	
+} 
+.menu-lamp > li .submenu ul
+{
+	position:relative;
+	top:-42px;
+	left:180px;
+}
+.submenu li 
+{
+   cursor:pointer;
+   width: 180px;
+   text-align:left;	
+   display:none;
+   font-size: 12px;
+   color:#fff;
+   height:42px;
+}
+.submenu li a{
+   text-decoration: none;
+   color:#fff;
+   padding:10px 10px 10px 15px;
+   display:block;
+   background:#444;
+   border-top:1px solid #4e4e4e;
+   border-bottom:1px solid #363636;  
+   color:#aaa; 
+}
+.submenu li a:hover
+{
+	background:#39c381;
+	color:#fff;
+   border-top:1px solid transparent;
+   border-bottom:1px solid transparent;  
+   text-indent:10px;
+}
+
+/* settings for submenu links on rollover*/
+.menu-lamp ul, li li{
+  width: 0px;		 
+}
+/*settings for submenu links*/
+
+/*settings for lava lamp sliding effect*/
+
+#box 
+{
+	position:absolute; 
+	left:0; 
+	top:0; 
+	z-index:6; 
+	border-top:3px solid #39c381;
+	height:10px;
+}
+#box .head {
+	text-align:center;
+	line-height:12px !important;				
+}
+#box .head i
+{
+	color:#39c381;
+	position:relative;
+	font-size:12px;
+	z-index:5;
+	display:block;
+	margin-top:-6px;
+}
+/* =============================================================== */
+/* Navigation 2
+/* =============================================================== */
+.navigation-2 .menu-lamp > li > a{height:110px;}
+.navigation-2 .menu-lamp > li > a.active
+{
+	background:#f5f5f5;
+	height:110px;
+}
+.navigation-2 .menu-lamp > li > a:hover
+{
+	background:#f5f5f5;
+}
+.navigation-2 .menu-lamp > li:hover .submenu{top:0;}
+.navigation-2 .menu-lamp > li .submenu li:hover .submenu{top:-42px;}
+/* =============================================================== */
+/* Navigation 3
+/* =============================================================== */
+#header-3
+{
+	height:auto;
+}
+#header-3 .aveta-logo
+{
+
+}
+.navigation-3
+{
+	clear:both;
+	height:auto;
+	border-top:1px solid #f5f5f5;
+	float:none !important;
+
+}
+.navigation-3 .menu-lamp, .navigation-3 .menu-lamp > li
+{
+	height:50px;
+}
+.navigation-3 .menu-lamp{width:100%!important;}
+.navigation-3 .menu-lamp > li{width:auto; padding-right:40px;}
+.navigation-3 .menu-lamp > li:last-child{padding-right:0;}
+.navigation-3 .menu-lamp > li .submenu{top:0;}
+.navigation-3 .menu-lamp > li > a {padding:15px 0; text-align:left}
+.navigation-3 .menu-lamp > li > a > i {font-size:10px; font-weight:normal; margin-left:3px;}
+.navigation-3 .menu-lamp > li > a:after
+{
+	display:none;
+}
+.navigation-3 .menu-lamp > li .submenu li:hover .submenu{top:-42px;}
+.header-info
+{
+	float:right;
+	width:200px;
+	text-align:right;
+	padding-top:35px;
+}
+/* =============================================================== */
+/* Navigation 4
+/* =============================================================== */
+#header-4 #top-header .container
+{
+	height:35px;
+	background:#f5f5f5;
+	line-height:35px;
+	color:#999;
+	font-size:11px;
+	overflow:hidden;
+}
+#header-4 #top-header .container a
+{
+	color:#39c381;
+}
+#header-4 #top-header .container a:hover
+{
+	text-decoration:underline;
+}
+#header-4 {height:145px;}
+#header-4 .menu-lamp {width:600px;}
+#header-4 .menu-lamp > li{width:100px;}
+#header-4 .menu-lamp > li > a{text-align:left; padding:35px 0 0;}
+#header-4 .menu-lamp > li > a:after
+{
+	color: #cbcbcb;
+	content: attr(data-desc);
+	font-size: 11px;
+	display: block;
+	line-height: 0;
+	margin: 8px 0 0;
+	font-weight:normal;
+	text-align: left;
+	text-transform:capitalize;
+}
+/* =============================================================== */
+/* Navigation 5
+/* =============================================================== */
+
+#header-5 .menu-lamp
+{
+	bottom:0;
+}
+#header-5 .header-info
+{
+	float:none;
+	padding-top:15px;
+	margin-bottom:5px;
+	width:100%;
+	display:block;
+}
+#header-5 .header-info span
+{
+	line-height:45px;
+	margin-right:10px;
+	color:#999;
+}
+#header-5 .txt-search
+{
+	display:inline;
+	width:200px;
+}
+#header-5 .menu-lamp , #header-5 #navigation
+{
+	border:0;
+	margin:0;
+	height:40px;
+	width:auto;
+}
+#header-5 .menu-lamp > li > a:after
+{
+	display:none;
+}
+#header-5 .menu-lamp > li
+{
+	height:50px;
+	width:auto;
+}
+#header-5 .menu-lamp > li > a
+{
+	padding:10px;
+	padding-left:20px;
+	text-align:left;
+}
+#header-5 .menu-lamp > li:last-child > a
+{
+	padding:10px 0 10px 10px;
+}
+#header-5 .menu-lamp .submenu
+{
+	top:3px;
+}
+#header-5 .menu-lamp .submenu .submenu
+{
+	top:-42px;
+}

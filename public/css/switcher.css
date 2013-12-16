@@ -1,0 +1,103 @@
+/* =============================================================== */
+/* Switcher
+/* =============================================================== */
+#switcher
+{
+	position:fixed;
+	width:163px;
+	padding:10px;
+	background:#111;
+	top:100px;
+	left:-163px;
+	z-index:111;
+	transition: left ease-in-out .5s;	
+}
+#switcher.toggle-in
+{
+	left:0;
+}
+#switcher.toggle-out
+{
+	left:-163px;
+}
+#sw-button-toggle
+{
+	position:absolute;
+	top:0;
+	right:-50px;
+	text-align:center;
+	line-height:50px;
+	font-size:20px;
+	cursor:pointer;
+	display:block;
+	width:50px;
+	height:50px;
+	background:#111;
+	color:#fff;
+}
+.sw-title
+{
+	display:block;
+	height:50px;
+	margin:0;
+	padding:0;
+	line-height:30px;
+	text-align:center;
+	color:#888;	
+}
+.sw-btn
+{
+	display:inline-block;
+	padding:10px 12px;
+	background:#39c381;
+	cursor:pointer;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+
+}
+.sw-btn:hover{	color:#000;	background:#fff;}
+.sw-btn.fullwidth{	width:100%;	padding:10px 0;	margin-top:3px;}
+#switcher h5{	padding-bottom:5px;	padding-top:10px; color:#888;}
+#switcher p{	padding:0;	margin:0;}
+#switcher .bg-pattern li, #switcher .skin li
+{
+	display:block;
+	float:left;
+	width:25px;
+	height:25px;
+	margin-right:3px;
+	margin-bottom:3px;
+	background:#ccc;
+	cursor:pointer;
+
+}
+#switcher .skin li{	width:25px;	height:25px;}
+#switcher .skin li#green{background:#39c381}
+#switcher .skin li#red{background:#eb4a4a}
+#switcher .skin li#blue{background:#03a4d6}
+#switcher .skin li#orange{background:#f77239}
+#switcher .skin li#steel{background:#647687}
+#switcher .skin li#steel{background:#647687}
+
+.bg-1{background:url(../images/background/bg-8.jpg);}
+.bg-2{background:url(../images/background/bg-2.png);}
+.bg-3{background:url(../images/background/bg-3.png);}
+.bg-4{background:url(../images/background/bg-4.png);}
+.bg-5{background:url(../images/background/bg-5.png);}
+.bg-6{background:url(../images/background/bg-6.jpg);}
+.bg-7{background:url(../images/background/bg-7.jpg);}
+.bg-8{background:url(../images/background/bg-1.png); background-size:350px 350px;}
+.bg-9{background:url(../images/background/bg-9.jpg); background-size:297px 297px;}
+.bg-10{background:url(../images/background/bg-10.jpg);}
+
+#switcher .bg-pattern li.bg-1{background:url(../images/background/thumb-8.jpg)}
+#switcher .bg-pattern li.bg-2{background:url(../images/background/thumb-2.png)}
+#switcher .bg-pattern li.bg-3{background:url(../images/background/thumb-3.png)}
+#switcher .bg-pattern li.bg-4{background:url(../images/background/thumb-4.png)}
+#switcher .bg-pattern li.bg-5{background:url(../images/background/thumb-5.png)}
+#switcher .bg-pattern li.bg-6{background:url(../images/background/thumb-6.jpg)}
+#switcher .bg-pattern li.bg-7{background:url(../images/background/thumb-7.jpg)}
+#switcher .bg-pattern li.bg-8{background:url(../images/background/thumb-1.png)}
+#switcher .bg-pattern li.bg-9{background:url(../images/background/thumb-9.jpg)}
+#switcher .bg-pattern li.bg-10{background:url(../images/background/thumb-10.jpg); background-size:512px 512px;}

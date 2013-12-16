@@ -85,7 +85,8 @@ app.use(function(req, res) {
     res.render('countdown', {
 //  res.render('404', {
     title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
-    url: req.url
+    url: req.url,
+    layout: 'countdown'
   });
 });
 

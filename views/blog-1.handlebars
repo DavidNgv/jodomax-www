@@ -58,7 +58,7 @@
               <h3 class="entry-title"><a href="#">Handlebars setup main layout to generate javascript depends on which page</a></h3>
               <p>For example, when I need to load extra scripts for specific page, I would need to use if command of handlebars.</p>
               <pre class="clearfix prettyprint">
-        {{#if isBlog}}
+        #if isBlog
           <script src="/js/jquery.flexslider.js" type="text/javascript"></script>
           <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
           <script>
@@ -76,16 +76,15 @@
               });
             });
           </script>
-        {{/if}}
-
+        /if
               </pre>
             </div>
             <div class="entry-meta effect-loaded">
               <ul>
                 <li class="clearfix"><i class="post-type icon-picture"></i></li>
-                <li><span><strong>Posted:</strong> <a href="#">July 21, 2013</a></span></li>
-                <li><span><strong>Tags:</strong> <a href="#">Photo</a></span></li>
-                <li><span><strong>Comments:</strong> <a href="#">5</a></span></li>
+                <li><span><strong>Posted:</strong> <a href="#">December 17, 2013</a></span></li>
+                <li><span><strong>Tags:</strong> <a href="#">Nodejs, Handlebars</a></span></li>
+                <li><span><strong>Comments:</strong> <a href="#">0</a></span></li>
               </ul>
             </div>
           </article>

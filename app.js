@@ -117,7 +117,7 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/ve-jodomax', function (req, res) {
+app.get('/gioi-thieu', function (req, res) {
   res.render('about', {
     title: _title
   });

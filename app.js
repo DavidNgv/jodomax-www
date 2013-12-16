@@ -67,6 +67,31 @@ function exposeTemplates(req, res, next) {
     });
 }
 
+var _countdownHandler = function (req, res) {
+  res.render('countdown', {
+    title: _title,
+    url: req.url,
+    layout: 'countdown'
+  });
+};
+
+var _notfoundHandler = function(req, res) {
+  res.status(400);
+
+  res.render('404', {
+    title: _title,
+    url: req.url
+  });
+};
+
+var _otherErrorHandler = function(error, req, res, next) {
+  res.status(500);
+  res.render('500', {
+    title: _title,
+    url: req.url,
+    error: error
+  });
+};
 
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -80,26 +105,10 @@ app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express['static'](path.join(__dirname, 'public')));
 
 // Handle 404
-app.use(function(req, res) {
-  res.status(400);
-
-//  res.render('countdown', {
-  res.render('404', {
-    title: _title,
-    url: req.url,
-    layout: 'countdown'
-  });
-});
+app.use(_notfoundHandler);
 
 // Handle 500
-app.use(function(error, req, res, next) {
-  res.status(500);
-  res.render('500', {
-    title: _title,
-    url: req.url,
-    error: error
-  });
-});
+app.use(_otherErrorHandler);
 
 
 // development only
@@ -126,13 +135,11 @@ app.get('/gioi-thieu', function (req, res) {
   });
 });
 
-app.get('/san-pham/:category?', function (req, res) {
-  res.render('countdown', {
-    title: _title,
-    url: req.url,
-    layout: 'countdown'
-  });
-});
+app.get('/san-pham/:category?', _countdownHandler);
+app.get('/giam-gia/:category?', _countdownHandler);
+app.get('/bai-viet/:type?', _countdownHandler);
+app.get('/lien-he', _countdownHandler);
+
 
 /*
  * Start server

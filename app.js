@@ -82,7 +82,8 @@ app.use(express['static'](path.join(__dirname, 'public')));
 // Handle 404
 app.use(function(req, res) {
   res.status(400);
-  res.render('404', {
+    res.render('countdown', {
+//  res.render('404', {
     title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
     url: req.url
   });
@@ -109,34 +110,16 @@ if ('development' == app.get('env')) {
 /*
  * Router section
  */
-//app.get('/', routes.index);
-//app.get('/users', user.list);
-
 app.get('/', function (req, res) {
     res.render('index', {
         title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam'
     });
 });
 
-/*
-//The 404 Route (ALWAYS Keep this as the last route)
-app.get('*', function(req, res){
-    res.render('404', {
-        title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam'
-    });
-});
-*/
 
 /*
-app.use(function(req, res) {
-    res.render('404', {
-//    res.render('countdown', {
-        title: 'Jodomax Fashion - Thời trang công sở nữ hàng đầu Việt Nam',
-        url: req.url
-    });
-});
-*/
-
+ * Start server
+ */
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

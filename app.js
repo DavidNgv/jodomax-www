@@ -140,7 +140,15 @@ app.get('/gioi-thieu', function (req, res) {
 
 app.get('/san-pham/:category?', _countdownHandler);
 app.get('/giam-gia/:category?', _countdownHandler);
-app.get('/bai-viet/:type?', _countdownHandler);
+
+app.get('/bai-viet/:type?', function (req, res) {
+  res.render('blog-1', {
+    title: _title,
+    url: req.url,
+    isBlog: true
+  });
+});
+
 app.get('/lien-he', _countdownHandler);
 
 

@@ -113,13 +113,15 @@ if ('development' == app.get('env')) {
  */
 app.get('/', function (req, res) {
     res.render('index', {
-      title: _title
+      title: _title,
+      url: req.url
     });
 });
 
 app.get('/gioi-thieu', function (req, res) {
   res.render('about', {
-    title: _title
+    title: _title,
+    url: req.url
   });
 });
 

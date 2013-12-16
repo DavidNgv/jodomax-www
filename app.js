@@ -82,8 +82,9 @@ app.use(express['static'](path.join(__dirname, 'public')));
 // Handle 404
 app.use(function(req, res) {
   res.status(400);
-    res.render('countdown', {
-//  res.render('404', {
+
+//  res.render('countdown', {
+  res.render('404', {
     title: _title,
     url: req.url,
     layout: 'countdown'
@@ -122,6 +123,14 @@ app.get('/gioi-thieu', function (req, res) {
   res.render('about', {
     title: _title,
     url: req.url
+  });
+});
+
+app.get('/san-pham/:category', function (req, res) {
+  res.render('countdown', {
+    title: _title,
+    url: req.url,
+    layout: 'countdown'
   });
 });
 

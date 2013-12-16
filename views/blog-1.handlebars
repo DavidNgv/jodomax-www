@@ -53,10 +53,32 @@
             </div>
           </article>
           <!--End Article-->
-          <article class="clearfix"> <a href="#"><img src="images/blog-thumbail2.jpg" alt="" /></a>
+          <article class="clearfix"> <a href="#"><img src="/images/blog-thumbail2.jpg" alt="" /></a>
             <div class="entry-body effect-loaded">
-              <h3 class="entry-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h3 class="entry-title"><a href="#">Handlebars setup main layout to generate javascript depends on which page</a></h3>
+              <p>For example, when I need to load extra scripts for specific page, I would need to use if command of handlebars.</p>
+              <pre class="clearfix prettyprint">
+        {{#if isBlog}}
+          <script src="/js/jquery.flexslider.js" type="text/javascript"></script>
+          <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+          <script>
+            $(document).ready(function() {
+              $('.entry-slider').flexslider({
+                animation: "fade",
+                easing: "swing",
+                controlNav:false,
+                prevText: "<i class='icon-angle-left'></i>",
+                nextText: "<i class='icon-angle-right'></i>",
+                before: function(slider) {
+                },
+                after: function(slider) {
+                }
+              });
+            });
+          </script>
+        {{/if}}
+
+              </pre>
             </div>
             <div class="entry-meta effect-loaded">
               <ul>

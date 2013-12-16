@@ -125,7 +125,8 @@ if ('development' == app.get('env')) {
 app.get('/', function (req, res) {
     res.render('index', {
       title: _title,
-      url: req.url
+      url: req.url,
+      isHome: true
     });
 });
 
